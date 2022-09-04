@@ -1,10 +1,10 @@
 checkEachAffectLabel <- function(x) {
   #´ labels a string
   #'
-  #' @description
+  #' @description Helper function for the GALC_Labeler. Checks a given string with each Emotion class. If nothing matches, returns NA.
   #'
   #' @param x: a string
-  #'
+  #' @keywords internal
   #'
 
   # I only take strings!
@@ -53,8 +53,10 @@ checkEachAffectLabel <- function(x) {
   if(checkPositive(x))        {y <- paste(y," Positive;")}
   if(checkNegative(x))        {y <- paste(y," Negative;")}
 
-  ## If x does not match any label return NA
+  ## Removing leading space
   if(y != "") { y <- sub("^\\s+", "", y)}
+
+  ## If x does not match any label return NA
   if(y == "") {y <- NA}
 
 
