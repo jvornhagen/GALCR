@@ -53,11 +53,15 @@ GALC_Labeler <- function(x, flagNotLabled=FALSE, sep=NA) {
       }
 
       if(is.na(y))  {
-        returny = paste(returny, " Not labled: ", i, ";", sep="")
+        returny = paste(returny, " Not labled:", i, ";", sep="")
       }
     }
 
-    returny <- sub("^\\s+", "", returny)
+    returny <- gsub(" ", "", returny)
+    returny <- sub("^;", "", returny)
+    returny <- sub(":", ": ", returny)
+    returny <- gsub("Notlabled", "Not labled", returny)
+
     return(returny)
   }
 }
