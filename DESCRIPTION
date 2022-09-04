@@ -1,0 +1,11 @@
+Package: GALCR
+Type: Package
+Title: Label the emotions contained in strings and character vectors using the Geneva Affect Label Coder (GALC)
+Version: 0.1.0
+Author: Jan B. Vornhagen
+Maintainer: Jan B. Vornhagen
+Description: This package implements Geneva Affect Label Coder as described in "Scherer, K.R. (2005). What are emotions? And how should they be measured? Social Science Information, 44(4), 695-729. DOI: 10.1177/0539018405058216". This is based on the excel macro found at https://www.unige.ch/cisa/research/materials-and-online-research/research-material/ and is licensed as CC BY-NC-SA 3.0
+License: CC BY-NC-SA 3.0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.1
