@@ -1,6 +1,6 @@
 checkAwe <- function(x) {
 #' @keywords internal
-    Words <- c(" admir", " ador", " awe", " azed", " dazzl",	" enrapt",	" enthrall",	" fascina",	" marveli",	" rapt",	" reveren",	" spellbound",	" wonder",	" worship" )
+    Words <- c("\\badmir", "\\bador", "\\bawe", "\\bazed", "\\bdazzl",	"\\benrapt",	"\\benthrall",	"\\bfascina",	"\\bmarveli",	"\\brapt",	"\\breveren",	"\\bspellbound",	"\\bwonder",	"\\bworship")
     for(i in Words) {
       if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
     }
@@ -9,7 +9,7 @@ checkAwe <- function(x) {
 }
 
 checkAmusement <- function(x) {
-  Words <- c(" amus",	" fun",	" humor",	" laugh",	" play",	" rollick",	" smil" )
+  Words <- c("\\bamus",	"\\bfun",	"\\bhumor",	"\\blaugh",	"\\bplay",	"\\brollick",	"\\bsmil")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -18,8 +18,7 @@ checkAmusement <- function(x) {
 }
 
 checkAnger <- function(x) {
-  Words <- c(" anger",	" angr",	" cross",	" enrag",	" furious",	" fury",	" incens",	" infuriat",	" irate",	" ire",	" mad",	" rag",	" resent",	" temper",	" wrath",	" wrought"
-)
+  Words <- c("\\banger",	"\\bangr",	"\\bcross",	"\\benrag",	"\\bfurious",	"\\bfury",	"\\bincens",	"\\binfuriat",	"\\birate",	"\\bire",	"\\bmad",	"\\brag",	"\\bresent",	"\\btemper",	"\\bwrath",	"\\bwrought")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -28,7 +27,7 @@ checkAnger <- function(x) {
 }
 
 checkAnxiety <- function(x) {
-  Words <- c(" anguish",	" anxi",	" apprehens",	" diffiden",	" jitter",	" nervous",	" trepida",	" wari",	" wary",	" worried",	" worry" )
+  Words <- c("\\banguish",	"\\banxi",	"\\bapprehens",	"\\bdiffiden",	"\\bjitter",	"\\bnervous",	"\\btrepida",	"\\bwari",	"\\bwary",	"\\bworried",	"\\bworry")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -37,7 +36,7 @@ checkAnxiety <- function(x) {
 }
 
 checkBeingTouched <- function(x) {
-  Words <- c(" affect",	" mov",	" touch" )
+  Words <- c("\\baffect",	"\\bmov",	"\\btouch")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -46,7 +45,7 @@ checkBeingTouched <- function(x) {
 }
 
 checkBoredom <- function(x) {
-  Words <- c(" bor",	" ennui",	" indifferen",	" languor",	" tedi",	" wear" )
+  Words <- c("\\bbor",	"\\bennui",	"\\bindifferen",	"\\blanguor",	"\\btedi",	"\\bwear")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -55,7 +54,7 @@ checkBoredom <- function(x) {
 }
 
 checkCompassion <- function(x) {
-  Words <- c(" commiser",	" compass",	" empath",	" pit" )
+  Words <- c("\\bcommiser",	"\\bcompass",	"\\bempath",	"\\bpit")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -64,7 +63,7 @@ checkCompassion <- function(x) {
 }
 
 checkContempt <- function(x) {
-  Words <- c(" contempt",	" denigr",	" deprec",	" deris",	" despi",	" disdain",	" scorn" )
+  Words <- c("\\bcontempt",	"\\bdenigr",	"\\bdeprec",	"\\bderis",	"\\bdespi",	"\\bdisdain",	"\\bscorn")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -73,7 +72,7 @@ checkContempt <- function(x) {
 }
 
 checkContentment <- function(x) {
-  Words <- c(" comfortabl",	" content",	" satisf" )
+  Words <- c("\\bcomfortabl",	"\\bcontent",	"\\bsatisf")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -82,7 +81,7 @@ checkContentment <- function(x) {
 }
 
 checkDesparation <- function(x) {
-  Words <- c(" deject",	" desolat",	" despair",	" desperat",	" despond",	" disconsolat",	" hopeless",	" inconsol" )
+  Words <- c("\\bdeject",	"\\bdesolat",	"\\bdespair",	"\\bdesperat",	"\\bdespond",	"\\bdisconsolat",	"\\bhopeless",	"\\binconsol")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -91,7 +90,7 @@ checkDesparation <- function(x) {
 }
 
 checkDisappointment <- function(x) {
-  Words <- c(" comedown",	" disappoint",	" discontent",	" disenchant",	" disgruntl",	" disillusion",	" frustrat",	" jilt",	" letdown",	" resign",	" sour",	" thwart" )
+  Words <- c("\\bcomedown",	"\\bdisappoint",	"\\bdiscontent",	"\\bdisenchant",	"\\bdisgruntl",	"\\bdisillusion",	"\\bfrustrat",	"\\bjilt",	"\\bletdown",	"\\bresign",	"\\bsour",	"\\bthwart")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -100,7 +99,7 @@ checkDisappointment <- function(x) {
 }
 
 checkDisgust <- function(x) {
-  Words <- c(" abhor",	" avers", " detest", " disgust",	" dislik",	" disrelish",	" distast",	" loath",	" nause",	" queas",	" repugn",	" repuls",	" revolt",	" sicken" )
+  Words <- c("\\babhor",	"\\bavers", "\\bdetest", "\\bdisgust",	"\\bdislik",	"\\bdisrelish",	"\\bdistast",	"\\bloath",	"\\bnause",	"\\bqueas",	"\\brepugn",	"\\brepuls",	"\\brevolt",	"\\bsicken")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -109,7 +108,7 @@ checkDisgust <- function(x) {
 }
 
 checkDissatisfaction <- function(x) {
-  Words <- c(" dissatisf", " unhapp" )
+  Words <- c("\\bdissatisf", "\\bunhapp")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -118,7 +117,7 @@ checkDissatisfaction <- function(x) {
 }
 
 checkEnvy<- function(x) {
-  Words <- c(" envious",	" envy" )
+  Words <- c("\\benvious",	"\\benvy")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -127,7 +126,7 @@ checkEnvy<- function(x) {
 }
 
 checkFear<- function(x) {
-  Words <- c(" afraid",	" aghast", " alarm",	" dread",	" fear",	" fright",	" horr",	" panic",	" scare",	" terror" )
+  Words <- c("\\bafraid",	"\\baghast", "\\balarm",	"\\bdread",	"\\bfear",	"\\bfright",	"\\bhorr",	"\\bpanic",	"\\bscare",	"\\bterror")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -136,7 +135,7 @@ checkFear<- function(x) {
 }
 
 checkFeelingLove <- function(x) {
-  Words <- c(" affection",	" fond",	" love",	" friend",	" tender" )
+  Words <- c("\\baffection",	"\\bfond",	"\\blove",	"\\bfriend",	"\\btender")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -145,7 +144,7 @@ checkFeelingLove <- function(x) {
 }
 
 checkGratitude <- function(x) {
-  Words <- c(" grat",	" thank" )
+  Words <- c("\\bgrat",	"\\bthank")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -154,7 +153,7 @@ checkGratitude <- function(x) {
 }
 
 checkGuilt <- function(x) {
-  Words <- c(" blame",	" contriti",	" guilt",	" remorse",	" repent" )
+  Words <- c("\\bblame",	"\\bcontriti",	"\\bguilt",	"\\bremorse",	"\\brepent")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -163,7 +162,7 @@ checkGuilt <- function(x) {
 }
 
 checkHappiness <- function(x) {
-  Words <- c(" cheer",	" bliss",	" delect",	" delight",	" enchant",	" enjoy",	" felicit",	" happ",	" merr" )
+  Words <- c("\\bcheer",	"\\bbliss",	"\\bdelect",	"\\bdelight",	"\\benchant",	"\\benjoy",	"\\bfelicit",	"\\bhapp",	"\\bmerr")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -172,7 +171,7 @@ checkHappiness <- function(x) {
 }
 
 checkHatred <- function(x) {
-  Words <- c(" acrimon",	" hat",	" rancor" )
+  Words <- c("\\bacrimon",	"\\bhat",	"\\brancor")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -181,7 +180,7 @@ checkHatred <- function(x) {
 }
 
 checkHope <- function(x) {
-  Words <- c(" buoyan",	" confident",	" faith",	" hop",	" optim" )
+  Words <- c("\\bbuoyan",	"\\bconfident",	"\\bfaith",	"\\bhop",	"\\boptim")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -190,7 +189,7 @@ checkHope <- function(x) {
 }
 
 checkHumility <- function(x) {
-  Words <- c(" devout",	" humility" )
+  Words <- c("\\bdevout",	"\\bhumility")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -199,7 +198,7 @@ checkHumility <- function(x) {
 }
 
 checkInterest <- function(x) {
-  Words <- c(" absor",	" alert",	" animat",	" ardor",	" attenti",	" curi",	" eager",	" enrapt",	" engross",	" enthusias",	" ferv",	" interes",	" zeal" )
+  Words <- c("\\babsor",	"\\balert",	"\\banimat",	"\\bardor",	"\\battenti",	"\\bcuri",	"\\beager",	"\\benrapt",	"\\bengross",	"\\benthusias",	"\\bferv",	"\\binteres",	"\\bzeal")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -208,7 +207,7 @@ checkInterest <- function(x) {
 }
 
 checkIrritation <- function(x) {
-  Words <- c(" annoy",	" exasperat",	" grump",	" indign",	" irrita",	" sullen",	" vex" )
+  Words <- c("\\bannoy",	"\\bexasperat",	"\\bgrump",	"\\bindign",	"\\birrita",	"\\bsullen",	"\\bvex")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -217,7 +216,7 @@ checkIrritation <- function(x) {
 }
 
 checkJealousy <- function(x) {
-  Words <- c(" covetous",	" jealous" )
+  Words <- c("\\bcovetous",	"\\bjealous")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -226,7 +225,7 @@ checkJealousy <- function(x) {
 }
 
 checkJoy <- function(x) {
-  Words <- c(" ecstat",	" elat",	" euphor",	" exalt",	" exhilar",	" exult",	" flush",	" glee",	" joy",	" jubil",	" overjoyed",	" ravish",	" rejoic" )
+  Words <- c("\\becstat",	"\\belat",	"\\beuphor",	"\\bexalt",	"\\bexhilar",	"\\bexult",	"\\bflush",	"\\bglee",	"\\bjoy",	"\\bjubil",	"\\boverjoyed",	"\\bravish",	"\\brejoic")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -235,7 +234,7 @@ checkJoy <- function(x) {
 }
 
 checkLonging <- function(x) {
-  Words <- c(" crav",	" daydream",	" desir",	" fanta",	" hanker",	" hark",	" homesick",	" long",	" nostalg",	" pin",	" regret",	" wish",	" wistf",	" yearn" )
+  Words <- c("\\bcrav",	"\\bdaydream",	"\\bdesir",	"\\bfanta",	"\\bhanker",	"\\bhark",	"\\bhomesick",	"\\blong",	"\\bnostalg",	"\\bpin",	"\\bregret",	"\\bwish",	"\\bwistf",	"\\byearn")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -244,7 +243,7 @@ checkLonging <- function(x) {
 }
 
 checkLust <- function(x) {
-  Words <- c(" carnal",	" lust",	" climax",	" ecsta",	" orgas",	" sensu",	" sexual" )
+  Words <- c("\\bcarnal",	"\\blust",	"\\bclimax",	"\\becsta",	"\\borgas",	"\\bsensu",	"\\bsexual")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -253,7 +252,7 @@ checkLust <- function(x) {
 }
 
 checkPleasure <- function(x) {
-  Words <- c(" enjoy",	" delight",	" glow",	" pleas",	" thrill",	" zest" )
+  Words <- c("\\benjoy",	"\\bdelight",	"\\bglow",	"\\bpleas",	"\\bthrill",	"\\bzest")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -262,7 +261,7 @@ checkPleasure <- function(x) {
 }
 
 checkPride <- function(x) {
-  Words <- c(" pride",	" proud" )
+  Words <- c("\\bpride",	"\\bproud")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -271,7 +270,7 @@ checkPride <- function(x) {
 }
 
 checkRelaxation <- function(x) {
-  Words <- c(" ease",	" calm",	" carefree",	" casual",	" detach",	" dispassion",	" equanim",	" eventemper",	" laid-back",	" peace",	" placid",	" poise",	" relax",	" seren",	" tranquil",	" unruffl" )
+  Words <- c("\\bease",	"\\bcalm",	"\\bcarefree",	"\\bcasual",	"\\bdetach",	"\\bdispassion",	"\\bequanim",	"\\beventemper",	"\\blaid-back",	"\\bpeace",	"\\bplacid",	"\\bpoise",	"\\brelax",	"\\bseren",	"\\btranquil",	"\\bunruffl")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -280,7 +279,7 @@ checkRelaxation <- function(x) {
 }
 
 checkRelief <- function(x) {
-  Words <- c(" relie" )
+  Words <- c("\\brelie")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -289,7 +288,7 @@ checkRelief <- function(x) {
 }
 
 checkSadness <- function(x) {
-  Words <- c(" chagrin",	" deject",	" dole",	" gloom",	" glum",	" grie",	" hopeles",	" melancho",	" mourn",	" sad",	" sorrow",	" tear",	" weep" )
+  Words <- c("\\bchagrin",	"\\bdeject",	"\\bdole",	"\\bgloom",	"\\bglum",	"\\bgrie",	"\\bhopeles",	"\\bmelancho",	"\\bmourn",	"\\bsad",	"\\bsorrow",	"\\btear",	"\\bweep")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -298,7 +297,7 @@ checkSadness <- function(x) {
 }
 
 checkShame <- function(x) {
-  Words <- c(" abash",	" asham",	" crush",	" disgrace",	" embarras",	" humili",	" shame" )
+  Words <- c("\\babash",	"\\basham",	"\\bcrush",	"\\bdisgrace",	"\\bembarras",	"\\bhumili",	"\\bshame")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -307,7 +306,7 @@ checkShame <- function(x) {
 }
 
 checkSurprise <- function(x) {
-  Words <- c(" amaze",	" astonish",	" dumbfound",	" startl",	" stunn",	" surpris",	" aback",	" thunderstruck",	" wonder" )
+  Words <- c("\\bamaze",	"\\bastonish",	"\\bdumbfound",	"\\bstartl",	"\\bstunn",	"\\bsurpris",	"\\baback",	"\\bthunderstruck",	"\\bwonder")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -316,7 +315,7 @@ checkSurprise <- function(x) {
 }
 
 checkTension <- function(x) {
-  Words <- c(" activ",	" agit",	" discomfort",	" distress",	" strain",	" stress",	" tense" )
+  Words <- c("\\bactiv",	"\\bagit",	"\\bdiscomfort",	"\\bdistress",	"\\bstrain",	"\\bstress",	"\\btense")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -325,7 +324,7 @@ checkTension <- function(x) {
 }
 
 checkPositive <- function(x) {
-  Words <- c(" agree",	" excellent",	" fair",	" fine",	" good",	" nice",	" positiv" )
+  Words <- c("\\bagree",	"\\bexcellent",	"\\bfair",	"\\bfine",	"\\bgood",	"\\bnice",	"\\bpositiv")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
@@ -334,7 +333,7 @@ checkPositive <- function(x) {
 }
 
 checkNegative <- function(x) {
-  Words <- c(" bad",	" disagree",	" lousy",	" negativ",	" unpleas" )
+  Words <- c("\\bbad",	"\\bdisagree",	"\\blousy",	"\\bnegativ",	"\\bunpleas")
   for(i in Words) {
     if(grepl(i, x, ignore.case = TRUE)){ return(TRUE)}
   }
