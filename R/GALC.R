@@ -29,18 +29,20 @@ GALC_Labeler <- function(x, flagNotLabled=FALSE, sep=NA) {
   ### Check if argument x is a character vector
   if(!is.vector(x, mode = "character") && !is.character(x)) stop("X must be a character vector or string")
 
-  ### If x is just a character:
+  ### If x is just a character string:
   if(is.character(x) && is.na(sep)) {
     y <- checkEachAffectLabel(x)
 
     if(is.na(y) && flagNotLabled == TRUE)  {
       print(paste("The following entry did not include label-able words: ", x))
     }
+
+    y <- sub("^;", "", y)
     return(y)
 
   }
 
-  ### if sep is not NA
+  ### if sep is not NA:
   if(is.character(x) && !is.na(sep)) {
     unlistedX <- unlist(strsplit(x, split = sep))
     returny <- ""
@@ -49,17 +51,17 @@ GALC_Labeler <- function(x, flagNotLabled=FALSE, sep=NA) {
       y <- checkEachAffectLabel(i)
 
       if(!is.na(y)) {
-        returny = paste(returny, "; ", y)
+        returny = paste(returny, y, sep=";")
       }
 
       if(is.na(y))  {
-        returny = paste(returny, " Not labled:", i, ";", sep="")
+        returny = paste(returny, ";Not labled:", tolower(i), ";")
       }
     }
 
     returny <- gsub(" ", "", returny)
     returny <- sub("^;", "", returny)
-    returny <- sub(":", ": ", returny)
+    returny <- gsub(":", ": ", returny)
     returny <- gsub("Notlabled", "Not labled", returny)
 
     return(returny)
