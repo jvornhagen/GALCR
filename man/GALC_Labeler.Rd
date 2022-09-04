@@ -2,7 +2,7 @@
 \alias{GALC_Labeler}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Geneva Affect Label Coder labeling function
 }
 \description{
 GALC_Labeler takes a string or character vector and compares it to each of the 38 available emotion labels. All matches are returned as a single string.
