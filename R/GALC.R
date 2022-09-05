@@ -5,11 +5,11 @@ GALC_Labeler <- function(x, flagNotLabled=FALSE, sep=NA) {
   #' @description
   #' Labels a character vector or string using the Geneva Affect Label Coder (GALC). Can be used either standalone with a character vector/string, outputting labels or with dplyr mutate to create a new column that is labeled as GALC. After labeling, the GALC_Reporter can create a report.
   #'
-  #' @param x: a string or a character vector
-  #' @param flagNotLabled: if true, prints out words that could not be labeled
-  #' @param sep: if given a value, x is treated as a list with sep separating each entry. Each entry will be checked on it's own. Helpful if x is a list of only emotion terms and it is important to know which words are ignored. Will still return a single list with Labeled terms and the not-labled terms
+  #' @param x: a string or a character vector.
+  #' @param flagNotLabled: if true, prints out words that could not be labeled.
+  #' @param sep: if given a value, x is treated as a list with sep separating each entry. Each entry will be checked on it's own. Helpful if x is a list of only emotion terms and it is important to know which words are ignored. Will still return a single list with Labeled terms and the not-labled terms.
   #'
-  #' @return A character string
+  #' @return Returns a character string with each detected emotion separated by a semi-colon. If \code{sep} is set, returns a string with each detected emotion separated by a semi-colon and each not-labled word returned and marked with an asterisk.
   #'
   #'
   #' @examples
@@ -44,18 +44,26 @@ GALC_Labeler <- function(x, flagNotLabled=FALSE, sep=NA) {
 
   ### if sep is not NA:
   if(is.character(x) && !is.na(sep)) {
+
+    # Create a separated List of x and an empty vector to return later
     unlistedX <- unlist(strsplit(x, split = sep))
     returny <- ""
 
     for (i in unlistedX) {
       y <- checkEachAffectLabel(i)
 
+      # If a match is found:
       if(!is.na(y)) {
-        returny = paste(returny, y, sep=";")
+        # First check if match was already coded to avoid duplicate
+        if(!grepl(y, returny)) {
+          # If no: Paste code into return string
+          returny = paste(returny, y, sep=";")
+        }
       }
 
+      # If no match is found: Return the emotion marked with an asterisk
       if(is.na(y))  {
-        returny = paste(returny, ";Not labled:", tolower(i), ";")
+        returny = paste(returny, paste("*", tolower(i), sep=""), sep=";")
       }
     }
 
