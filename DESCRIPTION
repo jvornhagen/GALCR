@@ -1,10 +1,14 @@
 Package: GALCR
 Type: Package
 Title: Geneva Affect Label Coder (GALC) for R
-Version: 0.2
-Author: Jan B. Vornhagen [aut] 
-Maintainer: Jan B. Vornhagen <jan.vornhagen@aalto.fi>
-Description: This package implements Geneva Affect Label Coder as described in "Scherer, K.R. (2005). What are emotions? And how should they be measured? Social Science Information, 44(4), 695-729. DOI: 10.1177/0539018405058216". This is based on the excel macro found at https://www.unige.ch/cisa/research/materials-and-online-research/research-material/ and is licensed as CC BY-NC-SA 3.0
+Version: 0.5
+Authors@R: 
+    person(given = c("Jan", "Benjamin"), family = "Vornhagen", email = "janvornhagen@web.de", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8516-7840"))
+Description: Geneva Affect Label Coder as described in "Scherer, K.R. (2005). What are emotions? And how should they be measured? Social Science Information, 44(4), 695-729. DOI: 10.1177/0539018405058216".
+    Based on the excel macro found at https://www.unige.ch/cisa/research/materials-and-online-research/research-material/ and is licensed as CC BY-NC-SA 3.0
+URL: https://github.com/jvornhagen/GALCR
+BugReports: https://github.com/jvornhagen/GALCR
+Date: 2022-09-19
 License: CC BY-NC-SA 3.0
 Encoding: UTF-8
 LazyData: true

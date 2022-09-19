@@ -1,0 +1,20 @@
+## Scherer
+citHeader("When citing this package, please also cite the original paper:")
+
+citEntry(
+  entry = "Article",
+  author = as.person("Klaus R. Scherer"),
+  title = "What are emotions? And how can they be measured?",
+  doi = "10.1177/0539018405058216",
+  year = 2005,
+  month = "dec",
+  publisher = "SAGE Publications Ltd",
+  volume = 44,
+  number = 4,
+  pages = 695--729,
+  journal = "Social Science Information",
+
+  textVersion = paste("Scherer, K. R. (2005). What are emotions? And how can they be measured?. Social science information, 44(4), 695-729.")
+)
+
+citation(auto = meta)
